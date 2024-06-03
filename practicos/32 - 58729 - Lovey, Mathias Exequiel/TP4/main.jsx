@@ -1,4 +1,5 @@
 const { useState } = React;
+
 function App() {
     const [city, setCity] = useState('');
     const [weatherData, setWeatherData] = useState(null);
@@ -34,7 +35,7 @@ function App() {
             console.error('Error en la solicitud:', data.message);
         }
     };
-
+    
     return (
         <div className="Clima">
             <nav>
@@ -42,9 +43,9 @@ function App() {
                     <li><h1 style={{ color: 'black' }}>Clima</h1></li>
                 </ul>
                 <ul>
-                    <li><a href="Tucuman" onClick={() => handleSearch('Tucumán')}>Tucuman</a></li>
-                    <li><a href="Salta" onClick={() => handleSearch('Salta')}>Salta</a></li>
-                    <li><a href="BuenosAires" onClick={() => handleSearch('Buenos Aires')}>Buenos Aires</a></li>
+                    <li><a href="#" onClick={() => handleSearch('Tucumán')}>Tucuman</a></li>
+                    <li><a href="#" onClick={() => handleSearch('Salta')}>Salta</a></li>
+                    <li><a href="#" onClick={() => handleSearch('Buenos Aires')}>Buenos Aires</a></li>
                 </ul>
             </nav>
             <form role="search" onSubmit={(e) => { e.preventDefault(); handleSearch(city); }}>
